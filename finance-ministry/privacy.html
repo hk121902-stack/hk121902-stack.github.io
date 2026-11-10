@@ -11,7 +11,7 @@
 </style>
 </head>
 <body><main>
-<p class="meta">Finance Ministry · Updated 24 October 2026</p>
+<p class="meta">Finance Ministry · Updated 10 November 2026</p>
 <h1>Privacy policy</h1>
 <p>Finance Ministry is an independent personal expense tracker maintained by hk121902-stack. It is not a government service or bank. The app processes supported financial SMS on your Android device to create a local transaction ledger. There is no sign-up or app backend.</p>
 <h2>SMS access and other permissions</h2>
@@ -21,6 +21,7 @@
 <p>Notification permission is separate. Disabling notifications does not disable otherwise authorized capture. Manual entry works without SMS or notification permissions. You can pause capture in Settings.</p>
 <h2>Information stored on your device</h2>
 <p>The encrypted ledger stores amounts, currency, direction, status, categories, purposes, dates, masked account hints, supported parsed recipient labels, source mappings, descriptions, correction history, parser metadata and local repayment/refund links. Device-keyed fingerprints detect repeat delivery and matching transaction references. Raw SMS bodies, sender strings and raw reference numbers are not stored or uploaded.</p>
+<p>Some reviewed alerts have minimized format evidence in the encrypted ledger. Device-keyed hashes let an optional saved decision match the exact sender and supported message structure. The app keeps a masked account hint and normalized extraction fields. Each new message supplies its own amount, and payments recorded using a choice keep a short attribution. Turning off or deleting a choice leaves saved payments in place.</p>
 <p>Optional group expenses store participant nicknames, local IDs, exact shares, saved groups and individual settlement allocations. The app does not read contacts, invite participants or sync balances. Use nicknames rather than contact details. Labels and descriptions you type are stored locally; do not paste OTPs, full account numbers or private messages into them.</p>
 <h2>Security and retention</h2>
 <p>SQLCipher encrypts the ledger. Android Keystore protects local keys; the wrapped database password is held in private app preferences. The database and preferences are excluded from Android backup and device-transfer rules. Device manufacturers may implement backup behavior differently.</p>
@@ -29,8 +30,9 @@
 <p>The app has no advertising, analytics or developer-controlled data-upload service. You may create a password-encrypted backup or readable CSV report through Android's file picker. Backups include the ledger, supported settings, saved groups and repayment history. The backup password is not uploaded and cannot be recovered by the app.</p>
 <p>CSV is unencrypted and is not a restore backup. It can include participant nicknames, shares, received/unpaid amounts and financial classifications. Anyone with access to the file can read it. Your chosen storage provider may sync exported files under its own policies. Erase all and uninstall do not delete those copies.</p>
 <p>Restore validates and previews a backup before replacing the ledger. Restored capture and reminders remain paused until you explicitly reconfirm them.</p>
+<p>Encrypted backups include saved-choice summaries and payment attribution. Device keys and unconfirmed format evidence stay on the original installation. Restored SMS choices require a fresh qualifying alert and explicit consent. CSV does not include saved decisions or their matching evidence.</p>
 <h2>Notifications and widgets</h2>
-<p>Notifications show normalized transaction details, not source SMS. Optional budget and recurring-payment reminders show configured names and amounts; they never initiate payments or automatically record transactions. Private lock-screen visibility is requested, but Android settings determine what is visible. Your Messages app can independently show the original SMS. The optional home-screen summary widget requires consent and hides its financial summary while locked.</p>
+<p>Notifications show normalized transaction details, not source SMS. Optional budget and recurring-payment reminders show configured names and amounts; they never initiate payments or automatically record transactions. Optional daily summaries show the previous day's recorded money in and out and the number of payments awaiting review. Summary amounts are hidden on the lock screen by default; you can choose to show them. Android settings also determine what is visible. Your Messages app can independently show the original SMS. The optional home-screen summary widget requires consent and hides its financial summary while locked.</p>
 <h2>Support email and third parties</h2>
 <p>Contact <a href="mailto:financeministrysupport@gmail.com">financeministrysupport@gmail.com</a> for privacy questions, bugs or feature requests. Settings → Help &amp; feedback opens your email app with the app version and a blank report template. You review and send the email yourself. No transactions, SMS, logs, backups or screenshots are automatically attached. A copy-address option is available if no email app can open.</p>
 <p>The maintainer receives the information you choose to email, and your email provider handles the message under its own policies. Remove private details from any screenshots or examples you add. Share synthetic examples rather than real messages, OTPs or account information.</p>
